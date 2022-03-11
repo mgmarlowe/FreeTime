@@ -1,70 +1,60 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Free Time?
 
-## Available Scripts
+## *Time Confetti Solutions*
 
-In the project directory, you can run:
+---
 
-### `npm start`
+In today's world, we have a lot of extra time that we often don't notice. This is the ten minutes before you have to go pick up the kids, and the five minutes until your coffee order is ready, and the fifteen minutes when you accidentally get somewhere too early. These are bits of "time confetti" and they're often hard to utilize.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Personally, I've found it difficult to conceptualize these smaller chunks of time as anything other than the temporal equivilent of filler episodes, and usually spend them mindlessly scrolling through my news feed for something useless.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**FreeTime** is an app designed to help users figure out how to utilize time confetti. It started as just a list I made for myself on what to do with my time confetti, but the more it grew, the more possibilities I thought of adding. It's not complete yet, but I'm adding my process below this to remember the overview of what I've done here. Enjoy!
 
-### `npm test`
+#### How to Start an Application
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Started: 10 March 2022
+Finished: ?? ?????? ????
 
-### `npm run build`
+1. Make a wireframe
+    - https://wireframe.cc/fuGp3s
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Start a `create-react-app` file.
+    - `npx create-react-app freetime`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Make a hierarchy of component parts
+    - https://reactjs.org/docs/thinking-in-react.html
+    1. Header
+        - "Login" button {loginBtn}
+    2. Main content
+        - "Add Item" button {addItemBtn}
+        - timeBox {timeBox}
+            - Input box {}
+            - "How Much Time" label
+        - tagFilter {tagFilter}
+            - Wants/don't wants
+            - Tag
+                - Want button (thumbs up/check)
+                - Don't want button (thumbs down/X)
+    3. Footer
+        - FAQ
+        - Contact Us
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Create component files and call them in App.js:
+    - Header file
+    - Footer file
+    - Main section file
 
-### `npm run eject`
+5. Decide to use reactstrap after all.
+    - Design is tedious without a framework, though possible.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+6. Create Select box and options
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+7. Fiddle with layout
+    - Create "Login" button
+    - Create Jumbotron
+        - Find out Jumbotron isn't compatible with current Reactstrap, which uses Bootstrap 5
+    - Create large header to replace Jumbotron
+    - Make select box larger
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+8. 
