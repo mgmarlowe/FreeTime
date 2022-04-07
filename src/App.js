@@ -1,16 +1,21 @@
-import HeaderComponent from './components/HeaderComponent';
-import MainComponent from './components/MainComponent';
-import FooterComponent from './components/FooterComponent';
-import './App.css';
+import { Provider } from "react-redux";
+import { ConfigureStore } from "./redux/configureStore";
+import Main from "./components/MainComponent";
+import { BrowserRouter } from "react-router-dom";
+import "./App.css";
+
+const store = ConfigureStore();
 
 function App() {
-  return (
-    <div className="App">
-      <HeaderComponent />
-      <MainComponent />
-      <FooterComponent />
-    </div>
-  );
+    return (
+        <Provider store={store}>
+            <BrowserRouter>
+                <div className="App">
+                    <Main />
+                </div>
+            </BrowserRouter>
+        </Provider>
+    );
 }
 
 export default App;
