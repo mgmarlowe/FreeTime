@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Header from "./HeaderComponent";
-import Content from "./ContentComponent";
+import Picker from "./PickerComponent";
 import Footer from "./FooterComponent";
 
 class Main extends Component {
@@ -8,7 +8,7 @@ class Main extends Component {
         return (
             <div className="container">
                 <Header />
-                <Content />
+                <Picker />
                 <Footer />
             </div>
         );
