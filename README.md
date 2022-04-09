@@ -97,7 +97,16 @@ Finished: ?? ?????? ????
     - It doesn't work so far, but I'm working on it.
         - Currently it's just supposed to console log the values submitted, so that may just be not something that is possible with react, I don't know right now.
 
-15. Plan for next time:
-    - Create Action Types and Action Creators.
-    - Use React Router and the form to change view to show the selected time solutions (and update state?).
-    - Decide if I do or don't need Redux.
+15. Decide you don't need to use Router, or Redux, right now.
+
+    - Instead, use a component to render the time solutions under the select box.
+
+16. Add a local state to the Picker component, which will allow the Time component to access the values.
+
+17. Learn to render conditional components.
+
+    - Based on if and if...else statements.
+
+18. Get formatting correct on how to display items in each solution file.
+    - How do I switch solution files based on user input??
+    - Consolidate into one file, add key of "time: {timeValue}", and filter list? Then map results? Could work...

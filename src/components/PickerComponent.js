@@ -1,38 +1,60 @@
 import React, { Component } from "react";
-import { Button, Form, FormGroup, Input, Label } from "reactstrap";
-import { FIVE } from "../shared/5min";
-import { TEN } from "../shared/10min";
-import { FIFTEEN } from "../shared/15min";
-import { TWENTY } from "../shared/20min";
-import { THIRTY } from "../shared/30min";
+import {
+    Button,
+    Card,
+    CardBody,
+    CardTitle,
+    Form,
+    FormGroup,
+    Input,
+    Label,
+} from "reactstrap";
 import Time from "./TimeComponent";
 
 class Picker extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            time: "time",
-            fiveMin: FIVE,
-            tenMin: TEN,
-            fifteenMin: FIFTEEN,
-            twentyMin: TWENTY,
-            thirtyMin: THIRTY,
+            time: "fiveMin",
+            isSubmitted: false,
         };
 
+        this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleSubmit(e, value) {
+    handleChange(e) {
+        this.setState({ time: e.target.value });
+        this.setState({ isSubmitted: false });
+    }
+
+    handleSubmit(e) {
         e.preventDefault();
-        this.setState({ time: value });
+        this.setState({ isSubmitted: true });
     }
 
     render() {
+        const isSubmitted = this.state.isSubmitted;
+
+        let content;
+        if (isSubmitted) {
+            content = <Time time={this.state.time} />;
+        } else {
+            content = (
+                <Card>
+                    <CardTitle>Select your amount of spare time!</CardTitle>
+                    <CardBody>
+                        Solutions will appear with a link to help you out!
+                    </CardBody>
+                </Card>
+            );
+        }
+
         return (
             <div className="container">
                 <div className="row">
                     <div className="col">
-                        <Form onSubmit={(value) => this.handleSubmit(value)}>
+                        <Form onSubmit={this.handleSubmit}>
                             <FormGroup>
                                 <Label for="timeAmt" className="fs-2">
                                     How Much Time?
@@ -42,16 +64,21 @@ class Picker extends Component {
                                     name="time"
                                     type="select"
                                     className="form-select form-select-lg"
-                                    defaultValue="default"
+                                    value={this.state.time}
+                                    onChange={this.handleChange}
+                                    placeholder="Time"
                                 >
-                                    <option disabled value="default">
-                                        Time
+                                    <option value="fiveMin">5 minutes</option>
+                                    <option value="tenMin">10 minutes</option>
+                                    <option value="fifteenMin">
+                                        15 minutes
                                     </option>
-                                    <option value="5">5 minutes</option>
-                                    <option value="10">10 minutes</option>
-                                    <option value="15">15 minutes</option>
-                                    <option value="20">20 minutes</option>
-                                    <option value="30">30 minutes</option>
+                                    <option value="twentyMin">
+                                        20 minutes
+                                    </option>
+                                    <option value="thirtyMin">
+                                        30 minutes
+                                    </option>
                                 </Input>
                                 <Button
                                     type="submit"
@@ -61,7 +88,7 @@ class Picker extends Component {
                                 </Button>
                             </FormGroup>
                         </Form>
-                        <Time time={this.state.time} />
+                        {content}
                     </div>
                 </div>
             </div>
