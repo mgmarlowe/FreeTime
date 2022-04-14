@@ -108,5 +108,8 @@ Finished: ?? ?????? ????
     - Based on if and if...else statements.
 
 18. Get formatting correct on how to display items in each solution file.
-    - How do I switch solution files based on user input??
-    - Consolidate into one file, add key of "time: {timeValue}", and filter list? Then map results? Could work...
+
+    - How do I switch solution files based on user input?? Edit: Figured this one out!
+    - Consolidate into one file, add key of "time: {timeValue}", and filter list? Then map results? Could work... Edit: Did this!
+
+19. Add button to allow user-made time solutions

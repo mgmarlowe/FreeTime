@@ -1,12 +1,14 @@
 import React from "react";
-import { Navbar, NavbarBrand, Button } from "reactstrap";
+import { Button } from "reactstrap";
 
 function Header() {
     return (
         <React.Fragment>
-            <div className="position-relative border-bottom">
-                <h1 className=" mt-4 display-2">Free Time?</h1>
-                <h3 className="text-muted fst-italic">
+            <div className="position-relative border-bottom mb-5">
+                <h1 className="col mt-4 mb-2 display-2">
+                    <a href="/">Free Time?</a>
+                </h1>
+                <h3 className="col text-muted fst-italic">
                     Time Confetti Solutions
                 </h3>
                 <Button
@@ -16,11 +18,6 @@ function Header() {
                     Login
                 </Button>
             </div>
-            <Navbar dark sticky="top">
-                <div className="container">
-                    <NavbarBrand href="/"></NavbarBrand>
-                </div>
-            </Navbar>
         </React.Fragment>
     );
 }

@@ -30,7 +30,6 @@ class Time extends Component {
                     </div>
                 );
             });
-
         return <div>{list}</div>;
     }
 }

@@ -8,6 +8,7 @@ import {
     FormGroup,
     Input,
     Label,
+    Modal,
 } from "reactstrap";
 import Time from "./TimeComponent";
 
@@ -17,10 +18,17 @@ class Picker extends Component {
         this.state = {
             time: "fiveMin",
             isSubmitted: false,
+            isModalOpen: false,
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.toggleModal = this.toggleModal.bind(this);
+        this.addSolution = this.addSolution.bind(this);
+    }
+
+    addSolution(e) {
+        alert(`You have added a solution!`);
     }
 
     handleChange(e) {
@@ -31,6 +39,12 @@ class Picker extends Component {
     handleSubmit(e) {
         e.preventDefault();
         this.setState({ isSubmitted: true });
+    }
+
+    toggleModal() {
+        this.setState({
+            isModalOpen: !this.state.isModalOpen,
+        });
     }
 
     render() {
@@ -87,10 +101,44 @@ class Picker extends Component {
                                     Enter
                                 </Button>
                             </FormGroup>
+                            <Button
+                                className="outline btn btn-info mb-3"
+                                onClick={this.toggleModal}
+                            >
+                                Add Solution
+                            </Button>
                         </Form>
                         {content}
                     </div>
                 </div>
+                <Modal
+                    isOpen={this.state.isModalOpen}
+                    toggle={this.toggleModal}
+                >
+                    <Modal.Header toggle={this.toggleModal}>
+                        Add a custom time solution
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Form onSubmit={this.addSolution}>
+                            <FormGroup>
+                                <Label>Solution Name: </Label>
+                                <Input />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label>Solution Description: </Label>
+                                <Input></Input>
+                            </FormGroup>
+                            <FormGroup>
+                                <Label>Time length: </Label>
+                                <Input></Input>
+                            </FormGroup>
+                            <FormGroup>
+                                <Label>Link: </Label>
+                                <Input></Input>
+                            </FormGroup>
+                        </Form>
+                    </Modal.Body>
+                </Modal>
             </div>
         );
     }
