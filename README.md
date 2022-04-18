@@ -113,3 +113,12 @@ Finished: ?? ?????? ????
     - Consolidate into one file, add key of "time: {timeValue}", and filter list? Then map results? Could work... Edit: Did this!
 
 19. Add button to allow user-made time solutions
+
+    - Doesn't work all the way yet, but it's on the right track.
+
+20. Fix "Add Solution" modal
+
+    - It now works correctly.
+    - It still does not actually add a solution. Baby steps.
+
+21.

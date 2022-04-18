@@ -4,11 +4,14 @@ import {
     Card,
     CardBody,
     CardTitle,
+    Col,
     Form,
     FormGroup,
     Input,
     Label,
     Modal,
+    ModalHeader,
+    ModalBody,
 } from "reactstrap";
 import Time from "./TimeComponent";
 
@@ -28,7 +31,9 @@ class Picker extends Component {
     }
 
     addSolution(e) {
-        alert(`You have added a solution!`);
+        alert(
+            `You have added a solution!\nName: ${this.solutionName.value}\nDescription: ${this.solutionDescription.value}\nTime Length: Bug - To be fixed.\nLink: ${this.solutionLink.value}\nLink Description: ${this.solutionLinkDescription.value}`
+        );
     }
 
     handleChange(e) {
@@ -66,8 +71,8 @@ class Picker extends Component {
 
         return (
             <div className="container">
-                <div className="row">
-                    <div className="col">
+                <div>
+                    <div>
                         <Form onSubmit={this.handleSubmit}>
                             <FormGroup>
                                 <Label for="timeAmt" className="fs-2">
@@ -108,36 +113,131 @@ class Picker extends Component {
                                 Add Solution
                             </Button>
                         </Form>
-                        {content}
+                        <div>{content}</div>
                     </div>
                 </div>
                 <Modal
                     isOpen={this.state.isModalOpen}
                     toggle={this.toggleModal}
                 >
-                    <Modal.Header toggle={this.toggleModal}>
+                    <ModalHeader toggle={this.toggleModal}>
                         Add a custom time solution
-                    </Modal.Header>
-                    <Modal.Body>
+                    </ModalHeader>
+                    <ModalBody>
                         <Form onSubmit={this.addSolution}>
                             <FormGroup>
                                 <Label>Solution Name: </Label>
-                                <Input />
+                                <Input
+                                    name="solutionName"
+                                    id="solutionName"
+                                    type="text"
+                                    innerRef={(input) =>
+                                        (this.solutionName = input)
+                                    }
+                                />
                             </FormGroup>
                             <FormGroup>
                                 <Label>Solution Description: </Label>
-                                <Input></Input>
+                                <Input
+                                    name="solutionDescription"
+                                    id="solutionDescription"
+                                    type="text"
+                                    innerRef={(input) =>
+                                        (this.solutionDescription = input)
+                                    }
+                                />
                             </FormGroup>
-                            <FormGroup>
-                                <Label>Time length: </Label>
-                                <Input></Input>
+                            <FormGroup row tag="fieldset">
+                                <legend>Time length: </legend>
+                                <Col>
+                                    <FormGroup check>
+                                        <Input
+                                            name="timeLength"
+                                            value="fiveMin"
+                                            id="fiveMin"
+                                            type="radio"
+                                        />
+                                        <Label for="fiveMin" check>
+                                            5 minutes
+                                        </Label>
+                                    </FormGroup>
+                                    <FormGroup check>
+                                        <Input
+                                            name="timeLength"
+                                            value="tenMin"
+                                            id="tenMin"
+                                            type="radio"
+                                        />
+                                        <Label for="tenMin" check>
+                                            10 minutes
+                                        </Label>
+                                    </FormGroup>
+                                    <FormGroup check>
+                                        <Input
+                                            name="timeLength"
+                                            value="fifteenMin"
+                                            id="fifteenMin"
+                                            type="radio"
+                                        />
+                                        <Label for="fifteenMin" check>
+                                            15 minutes
+                                        </Label>
+                                    </FormGroup>
+                                    <FormGroup check>
+                                        <Input
+                                            name="timeLength"
+                                            value="twentyMin"
+                                            id="twentyMin"
+                                            type="radio"
+                                        />
+                                        <Label for="twentyMin" check>
+                                            20 minutes
+                                        </Label>
+                                    </FormGroup>
+                                    <FormGroup check>
+                                        <Input
+                                            name="timeLength"
+                                            value="thirtyMin"
+                                            id="thirtyMin"
+                                            type="radio"
+                                        />
+                                        <Label for="thirtyMin" check>
+                                            30 minutes
+                                        </Label>
+                                    </FormGroup>
+                                </Col>
                             </FormGroup>
                             <FormGroup>
                                 <Label>Link: </Label>
-                                <Input></Input>
+                                <Input
+                                    name="solutionLink"
+                                    id="solutionLink"
+                                    type="url"
+                                    innerRef={(input) =>
+                                        (this.solutionLink = input)
+                                    }
+                                />
                             </FormGroup>
+                            <FormGroup>
+                                <Label>Link Description: </Label>
+                                <Input
+                                    name="solutionLinkDescription"
+                                    id="solutionLinkDescription"
+                                    type="text"
+                                    innerRef={(input) =>
+                                        (this.solutionLinkDescription = input)
+                                    }
+                                />
+                            </FormGroup>
+                            <Button
+                                type="submit"
+                                value="submit"
+                                className="outline btn btn-info mb-3"
+                            >
+                                Add Solution
+                            </Button>
                         </Form>
-                    </Modal.Body>
+                    </ModalBody>
                 </Modal>
             </div>
         );
