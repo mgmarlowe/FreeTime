@@ -121,4 +121,20 @@ Finished: ?? ?????? ????
     - It now works correctly.
     - It still does not actually add a solution. Baby steps.
 
-21.
+21. Start work on changing Select to Checkboxes
+
+    - Put this in seperate file so it can be taken apart at will.
+        - Add this file to gitignore...
+
+22. Next things to do:
+
+    - Add buttons to each time solution that can clear it from view and fully delete the item
+        - The delete function will only work as a clear function at first, then I'll update it to delete it from local storage. But I won't delete it from the actual file until I can get users made.
+            - Even then, I may try to have a settings page instead where you can check boxes to hide default solutions from view.
+
+23. Figure out way to display solutions based on user clicks
+    - (Should I just collapse them instead of deleting them? Hmm...)
+    - Add key to each solution in timeSolutions.js
+        - show: true
+        - Set a button on each card rendered in TimeComponent that toggles the show.
+          -Also should add the name to a list somewhere that has a button to show again...

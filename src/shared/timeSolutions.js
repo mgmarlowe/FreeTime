@@ -6,6 +6,7 @@ export const SOLUTIONS = [
         description: "Do a deep breathing exercise.",
         link: "https://www.webmd.com/balance/stress-management/stress-relief-breathing-techniques",
         linkDescription: "'Breathing Techniques for Stress Relief' on WebMD",
+        show: true,
     },
     {
         id: 1,
@@ -14,6 +15,7 @@ export const SOLUTIONS = [
         description: "Reach high! Reach your toes!",
         link: "https://www.healthline.com/health/fitness-exercise/daily-stretching-routine",
         linkDescription: "",
+        show: true,
     },
     {
         id: 2,
@@ -22,6 +24,7 @@ export const SOLUTIONS = [
         description: "Do just 5 push-ups, focus on form.",
         link: "https://www.nerdfitness.com/blog/proper-push-up/",
         linkDescription: "",
+        show: true,
     },
     {
         id: 3,
@@ -30,6 +33,7 @@ export const SOLUTIONS = [
         description: "A few quick swipes to showcase your eyes. Beautiful!",
         link: "https://www.youtube.com/watch?v=tQ1FyKKO0oo",
         linkDescription: "",
+        show: true,
     },
     {
         id: 4,
@@ -39,6 +43,7 @@ export const SOLUTIONS = [
             "Put things where they go, or in a tidy pile to sort later. The goal is just to make it a little bit tidier, not completely clean!",
         link: "https://www.unfuckyourhabitat.com/",
         linkDescription: "",
+        show: true,
     },
     {
         id: 5,
@@ -48,6 +53,7 @@ export const SOLUTIONS = [
             "Throw away any trash you can see. Only for the time you have, though!",
         link: "https://www.unfuckyourhabitat.com/",
         linkDescription: "",
+        show: true,
     },
     {
         id: 6,
@@ -57,6 +63,7 @@ export const SOLUTIONS = [
             "Someone you haven't talked to in a while. They'd love to hear from you.",
         link: "https://cmha.ca/the-importance-of-human-connection/#:~:text=Social%20connection%20can%20lower%20anxiety,a%20time%20of%20true%20disconnection.",
         linkDescription: "",
+        show: true,
     },
     {
         id: 7,
@@ -66,15 +73,17 @@ export const SOLUTIONS = [
             "See what you still need to do. If it's too long, find the top 2 priorities for your day. If you don't have a list, make one!",
         link: "https://todoist.com/",
         linkDescription: "",
+        show: true,
     },
     {
         id: 8,
         timeAmt: "fiveMin",
         name: "Sew a button",
         description:
-            "It just takes a few minutes, them you don't have to worry about it again.",
+            "It just takes a few minutes, then you don't have to worry about it again.",
         link: "https://www.youtube.com/watch?v=MmcEF2GR584",
         linkDescription: "",
+        show: true,
     },
     {
         id: 9,
@@ -84,6 +93,7 @@ export const SOLUTIONS = [
             "Have you paid them for this statement period? When are they due next?",
         link: "https://www.printabulls.com/finance/monthly-bill-organizers/",
         linkDescription: "",
+        show: true,
     },
     {
         id: 10,
@@ -93,6 +103,7 @@ export const SOLUTIONS = [
             "Check the leaf shape and the bark pattern. Are there flowers or other unique parts of the plant?",
         link: "https://www.arborday.org/trees/whattree/",
         linkDescription: "",
+        show: true,
     },
     {
         id: 11,
@@ -102,6 +113,7 @@ export const SOLUTIONS = [
             "Check to be sure they need the water, first! Usually a plant will need water when the soil is dry up to your first kuckle when you put a finger into the soil. If you have more than you have time for, try to water plants by area and then note which areas still need water.",
         link: "https://www.bobvila.com/articles/watering-plants/#:~:text=How%20often%20should%20plants%20be,soil%20beneath%20should%20remain%20moist.",
         linkDescription: "",
+        show: true,
     },
     {
         id: 12,
@@ -110,6 +122,7 @@ export const SOLUTIONS = [
         description: "If you're not already, pick up one to start!",
         link: "https://play.google.com/store/apps/details?id=com.duolingo&hl=en_US&gl=US",
         linkDescription: "",
+        show: true,
     },
     {
         id: 13,
@@ -119,6 +132,7 @@ export const SOLUTIONS = [
             "Put things in their places if they live in that room, or in a basket to go to another room. Wipe down the counter. If you have time, take the basket to another room where the contents live.",
         link: "https://www.unfuckyourhabitat.com/",
         linkDescription: "",
+        show: true,
     },
     {
         id: 14,
@@ -128,6 +142,7 @@ export const SOLUTIONS = [
             "A few small poses to stretch out and breathe. If you're in an office, do some chair yoga.",
         link: "https://health.clevelandclinic.org/12-yoga-poses-can-work/",
         linkDescription: "",
+        show: true,
     },
     {
         id: 15,
@@ -137,6 +152,7 @@ export const SOLUTIONS = [
             "Think of something you wondered about before now. Go google that and find out an answer. Can't think of something? Try Wikipedia's random pages.",
         link: "https://en.wikipedia.org/wiki/Special:Random",
         linkDescription: "",
+        show: true,
     },
     {
         id: 16,
@@ -146,6 +162,7 @@ export const SOLUTIONS = [
             "How soothing! No hair, no hairbrush, or hard to brush hair? Go find hand lotion and moisturize! Take care of yourself!",
         link: "https://www.healthline.com/health/brushing-hair#benefits-of-brushing",
         linkDescription: "",
+        show: true,
     },
     {
         id: 17,
@@ -155,6 +172,7 @@ export const SOLUTIONS = [
             "It's an easy win! Not at home, or someone still in your bed? Organize a surface (desk, counter, etc.) so you have some visible clear space. This doesn't have to be perfect, good enough is awesome!",
         link: "https://www.unfuckyourhabitat.com/",
         linkDescription: "",
+        show: true,
     },
     {
         id: 18,
@@ -164,6 +182,7 @@ export const SOLUTIONS = [
             "Just a short one, around your house or around the office. Extra great if you can walk outside.",
         link: "",
         linkDescription: "",
+        show: true,
     },
     {
         id: 19,
@@ -173,6 +192,7 @@ export const SOLUTIONS = [
             "You don't even have to read for long, just a few minutes. Don't have a book handy? Open Library has plenty of free books available online.",
         link: "https://openlibrary.org/",
         linkDescription: "",
+        show: true,
     },
     {
         id: 20,
@@ -181,6 +201,7 @@ export const SOLUTIONS = [
         description: "Find out what species that neat bird outside is!",
         link: "https://merlin.allaboutbirds.org/",
         linkDescription: "",
+        show: true,
     },
     {
         id: 21,
@@ -190,6 +211,7 @@ export const SOLUTIONS = [
             "Just a little doodle, of something you see or something you're thinking about. No ideas? Try a drawing prompt!",
         link: "https://onedoodleaday.tumblr.com/",
         linkDescription: "",
+        show: true,
     },
     {
         id: 22,
@@ -199,6 +221,7 @@ export const SOLUTIONS = [
             "Take a walk around the block, or around the office complex! Make it a little brisk if you can, a little cardio every day improves your health dramatically, and being outside is a nice change of scenery for most of us!",
         link: "https://www.bbc.com/news/health-14526853",
         linkDescription: "",
+        show: true,
     },
     {
         id: 23,
@@ -207,6 +230,7 @@ export const SOLUTIONS = [
         description:
             "Have a household item that needs a quick bit of tape, a kid's toy that needs some hot glue, or a belt loop that needs a few stiches? This could be your chance!",
         link: "https://lifehacker.com/five-basic-hand-stitches-you-should-know-for-repairing-1723233194",
+        show: true,
     },
     {
         id: 24,
@@ -215,6 +239,7 @@ export const SOLUTIONS = [
         description:
             "A simple braid if youre new to it, or find an interesting new braid if you're quick at the usuals!",
         link: "https://www.youtube.com/watch?v=p4VaL-AG7cI",
+        show: true,
     },
     {
         id: 25,
@@ -223,6 +248,7 @@ export const SOLUTIONS = [
         description:
             "You probably have something you'd like to learn how to be better at. Maybe study your target language, or practice a piece of music on an instrument. If you're a student, find a topic you struggle with in a subject you like. If you're not a student, research something related to your job, or learn something to get you the job you want. Above all, make this something you enjoy, it's not a punishment!",
         link: "https://www.sciencenewsforstudents.org/article/top-10-tips-study-smarter-not-longer-study-skills",
+        show: true,
     },
     {
         id: 26,
@@ -230,6 +256,7 @@ export const SOLUTIONS = [
         name: "Mend something",
         description: "Sew a hole in your pants! Darn a socks!",
         link: "https://www.youtube.com/watch?v=QR5q5OIG51A",
+        show: true,
     },
     {
         id: 27,
@@ -238,6 +265,7 @@ export const SOLUTIONS = [
         description:
             "Learn to juggle! Or learn to yoyo, or to start a campfire! Learn how to survive a shark attack!",
         link: "https://www.mentalfloss.com/article/572087/learn-skills-on-youtube",
+        show: true,
     },
     {
         id: 28,
@@ -246,6 +274,7 @@ export const SOLUTIONS = [
         description:
             "Write your thoughts and experiences for the day, your goals for yourself, you habits, or anything you'd like. Journalling helps you reflect on what you've done and plan to do it better.",
         link: "https://www.betterup.com/blog/how-to-start-journaling",
+        show: true,
     },
     {
         id: 29,
@@ -253,5 +282,6 @@ export const SOLUTIONS = [
         name: "Work on a crossword puzzle",
         description: "",
         link: "https://puzzles.usatoday.com/game/79742842-b902-47c4-b525-d3a91a7952b1",
+        show: true,
     },
 ];

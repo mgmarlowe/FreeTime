@@ -19,8 +19,8 @@ class Picker extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            time: "fiveMin",
-            isSubmitted: false,
+            selectTime: "fiveMin",
+            displayTime: "",
             isModalOpen: false,
         };
 
@@ -37,13 +37,12 @@ class Picker extends Component {
     }
 
     handleChange(e) {
-        this.setState({ time: e.target.value });
-        this.setState({ isSubmitted: false });
+        this.setState({ selectTime: e.target.value });
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        this.setState({ isSubmitted: true });
+        this.setState({ displayTime: this.state.selectTime });
     }
 
     toggleModal() {
@@ -53,11 +52,11 @@ class Picker extends Component {
     }
 
     render() {
-        const isSubmitted = this.state.isSubmitted;
+        const displayTime = this.state.displayTime;
 
         let content;
-        if (isSubmitted) {
-            content = <Time time={this.state.time} />;
+        if (displayTime) {
+            content = <Time time={this.state.displayTime} />;
         } else {
             content = (
                 <Card>
