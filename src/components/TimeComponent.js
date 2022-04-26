@@ -26,7 +26,7 @@ function hideSolution(props) {
 function RenderTime({ solution }) {
     if (solution.linkDescription) {
         return (
-            <Card>
+            <Card color="info" outline>
                 <CardBody className="mb-2">
                     <Button
                         onClick={() => hideSolution({ solution })}
@@ -44,7 +44,7 @@ function RenderTime({ solution }) {
         );
     }
     return (
-        <Card>
+        <Card color="info" outline>
             <CardBody className="mb-2">
                 <Button
                     onClick={() => hideSolution({ solution })}
@@ -53,8 +53,10 @@ function RenderTime({ solution }) {
                     <BiHide />
                 </Button>
                 <CardTitle>{solution.name}</CardTitle>
-                {solution.description}
-                <CardLink href={solution.link}>{solution.link}</CardLink>
+                <CardText>{solution.description}</CardText>
+                <CardLink href={solution.link}>
+                    Here's a link to help you out!
+                </CardLink>
             </CardBody>
         </Card>
     );

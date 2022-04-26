@@ -22,6 +22,7 @@ class Picker extends Component {
             selectTime: "fiveMin",
             displayTime: "",
             isModalOpen: false,
+            modalTime: "fiveMin",
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -32,7 +33,7 @@ class Picker extends Component {
 
     addSolution(e) {
         alert(
-            `You have added a solution!\nName: ${this.solutionName.value}\nDescription: ${this.solutionDescription.value}\nTime Length: Bug - To be fixed.\nLink: ${this.solutionLink.value}\nLink Description: ${this.solutionLinkDescription.value}`
+            `You have added a solution!\nName: ${this.solutionName.value}\nDescription: ${this.solutionDescription.value}\nTime Length: ${this.state.modalTime} \nLink: ${this.solutionLink.value}\nLink Description: ${this.solutionLinkDescription.value}`
         );
     }
 
@@ -146,7 +147,13 @@ class Picker extends Component {
                                     }
                                 />
                             </FormGroup>
-                            <FormGroup row tag="fieldset">
+                            <FormGroup
+                                row
+                                tag="fieldset"
+                                onChange={(e) =>
+                                    this.setState({ modalTime: e.target.value })
+                                }
+                            >
                                 <legend>Time length: </legend>
                                 <Col>
                                     <FormGroup check>
