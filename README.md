@@ -133,8 +133,11 @@ Finished: ?? ?????? ????
             - Even then, I may try to have a settings page instead where you can check boxes to hide default solutions from view.
 
 23. Figure out way to display solutions based on user clicks
+
     - (Should I just collapse them instead of deleting them? Hmm...)
     - Add key to each solution in timeSolutions.js
         - show: true
         - Set a button on each card rendered in TimeComponent that toggles the show.
           -Also should add the name to a list somewhere that has a button to show again...
+
+24. Figured out how to make the FAQs accordion work. The Reactstrap documentation is NOT very clear on how to make it work, but I changed the top-most Accordion tag into the UncontrolledAccordion tag, and now it works.
