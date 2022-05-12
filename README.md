@@ -141,3 +141,10 @@ Finished: ?? ?????? ????
           -Also should add the name to a list somewhere that has a button to show again...
 
 24. Figured out how to make the FAQs accordion work. The Reactstrap documentation is NOT very clear on how to make it work, but I changed the top-most Accordion tag into the UncontrolledAccordion tag, and now it works.
+
+25. Now to make the Contact Us page...
+
+    - This needs to link to my github, linkedin, and portfolio website.
+        - Also, I need to add a projects tab onto my site for Free Time...
+
+26. Actually, nix the whole Contact Page and just add relevent links to the footer.
