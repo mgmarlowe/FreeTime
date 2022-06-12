@@ -1,43 +1,34 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { Button } from "reactstrap";
 
-class Header extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isLoggedIn: false,
-        };
+const Header = () => {
+    const [user, setUser] = useState(false);
 
-        this.handleLogin = this.handleLogin.bind(this);
-    }
-
-    handleLogin(e) {
-        this.setState({ isLoggedIn: !this.state.isLoggedIn });
+    function handleLogin(e) {
+        setUser({ user: !user });
         e.preventDefault();
     }
 
-    render() {
-        const title = this.state.isLoggedIn ? "Logout" : "Login";
-        return (
-            <React.Fragment>
-                <div className="position-relative border-bottom mb-5">
-                    <h1 className="col mt-4 mb-2 display-2">
-                        <a href="/">Free Time?</a>
-                    </h1>
-                    <h3 className="col text-muted fst-italic">
-                        Time Confetti Solutions
-                    </h3>
-                    <Button
-                        color="info"
-                        className="position-absolute top-0 end-0 me-md-5 "
-                        onClick={this.handleLogin}
-                    >
-                        {title}
-                    </Button>
-                </div>
-            </React.Fragment>
-        );
-    }
-}
+    const title = user ? "Logout" : "Login";
+    return (
+        <React.Fragment>
+            <div className="position-relative border-bottom mb-5">
+                <h1 className="col mt-4 mb-2 display-2">
+                    <a href="/">Free Time?</a>
+                </h1>
+                <h3 className="col text-muted fst-italic">
+                    Time Confetti Solutions
+                </h3>
+                <Button
+                    color="info"
+                    className="position-absolute top-0 end-0 me-md-5 "
+                    onClick={handleLogin}
+                >
+                    {title}
+                </Button>
+            </div>
+        </React.Fragment>
+    );
+};
 
 export default Header;

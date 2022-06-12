@@ -70,6 +70,8 @@ class Time extends Component {
         };
     }
 
+    // const [timeSolutions, setTimeSolutions] = useState(SOLUTIONS);
+
     render() {
         //const timeSolutions = this.state.timeSolutions;
         const list = this.state.timeSolutions

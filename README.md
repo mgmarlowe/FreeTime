@@ -148,3 +148,23 @@ Finished: ?? ?????? ????
         - Also, I need to add a projects tab onto my site for Free Time...
 
 26. Actually, nix the whole Contact Page and just add relevent links to the footer.
+
+27. Make copy of Free Time to make local server.
+
+    - This is the local server copy.
+
+28. Try to separate the PickerDropdown and AddSolution modal from the PickerComponent.
+
+    - No real success, broke my app so far...
+
+29. Fixed PickerDropdown
+
+    - Changed it to a functional component
+    - Added useState for time and displayTime
+    - Commented out 'Add Solution' functionality for now
+
+30. Next steps:
+    - Change TimeComponent to functional component with useState
+        - I think the useEffect function can be utilized with the hideSolution function to hide the solutions right after clicking the button
+    - Fix the AddSolution modal
+    - Change the rest of the components to functional components.
